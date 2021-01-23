@@ -1,0 +1,7 @@
+{
+  "name": "appControlUP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
