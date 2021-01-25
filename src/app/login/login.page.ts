@@ -14,11 +14,11 @@ export class LoginPage implements OnInit {
   }
 
   entrar() {
-    this.router.navigateByUrl('menu')
+    this.router.navigate(['/menu'])
   }
 
   salir() {
-    this.router.navigateByUrl('resetlogin')
+    this.router.navigate(['/resetlogin'])
   }
 
 }

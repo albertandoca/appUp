@@ -14,125 +14,31 @@
     </ion-buttons>
   </ion-toolbar>  
   <ion-text class="encabezado">
-    <h4>Provincia: {{provincia}}</h4>
-    <h4 *ngIf="distrito">Distrito: {{distrito}}</h4>
-    <h4>Cantón: {{canton}}</h4>
-    <h4>Paroquia: {{parroquia}}</h4>
-    <h4>Recinto: {{recinto}}</h4>
+    <h5><strong>Provincia: </strong> {{provincia}}</h5>
+    <h5 *ngIf="distrito"><strong>Distrito: </strong> {{distrito}}</h5>
+    <h5><strong>Cantón: </strong> {{canton}}</h5>
+    <h5><strong>Paroquia: </strong> {{parroquia}}</h5>
+    <h5><strong>Recinto: </strong> {{recinto}}</h5>
   </ion-text>
   <div class="juntas">
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
+    <ion-item-divider *ngFor="let junta of juntas; let i = index">
+      <ion-button [style.--background]="junta.control ? '#9b0b0e' : '#d5444a'" [disabled]="junta.sendData">Junta {{junta.numero}} {{junta.sexo}}</ion-button>
+      <ion-buttons class="send">
+        <ion-button slot="icon-only" [disabled]="!junta.takeImg || junta.sendData">
+          <ion-icon name="cloud-upload" ></ion-icon>
+        </ion-button>
+        <ion-button slot="icon-only" [disabled]="!junta.sendData || (junta.sendData && junta.sendImg)">
+          <ion-icon name="images" ></ion-icon>
+        </ion-button>
       </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
+      <ion-buttons class="check">
+        <ion-icon name="checkmark-outline" *ngIf="junta.sendData && !junta.sendImg"></ion-icon>
+        <ion-icon name="checkmark-done-outline" *ngIf="junta.sendData && junta.sendImg"></ion-icon>
       </ion-buttons>
+        
+      
     </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 1 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
-    <ion-item-divider>
-      <ion-button>Junta 2 F</ion-button>
-      <ion-buttons slot="end">
-        <ion-icon slot="start" name="star"></ion-icon>
-        <ion-icon slot="end" name="star"></ion-icon>
-      </ion-buttons>
-    </ion-item-divider>
+    
     
 
   </div>

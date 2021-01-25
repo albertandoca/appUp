@@ -12,6 +12,7 @@
     height: 3em;
     margin-left: 6em;
     margin-top: 1.5em;
+    margin-bottom: 1.5em;
     --background: #db1b23;
     color: white;
     ion-icon {
@@ -21,11 +22,11 @@
 }
 
 .encabezado {
-    color: #840405;
-    
-    h4 {
-        margin-left: 1em;
-        line-height: 0.9em;
+    color: white;   
+     
+    h5 {
+        padding: 0;
+        margin: 0 1em
     }
 }
 
@@ -40,12 +41,42 @@
 
 .juntas {
     position: relative;
-    margin: auto;
-    width: 80%;
-    height: 55%;
-    --background: #e78c94;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5em;
+    width: 90%;
+    height: 60%;
+    border-radius: 20px;
     border: 1px solid #d5444a;
     overflow-y: auto;
+    ion-item-divider {
+        --background: #fae4e4;
+        height: 4em;
+        ion-button {
+            font-size: 14pt;
+            width: 8em;
+        }
+    }
+}
+
+.send {
+    width: 5em;
+    margin-left: 1em;
+    
+    ion-button {
+        ion-icon {
+            color:  navy;
+            font-size: 28pt;
+        }
+    }
+}
+
+.check {
+    margin-left: 4em;
+    ion-icon {
+        color:  green;
+        font-size: 32pt;
+    }
 }
   
 .background-item{

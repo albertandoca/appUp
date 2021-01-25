@@ -16,15 +16,15 @@ export class MenuPage implements OnInit {
   }
 
   login() {
-    this.router.navigateByUrl('login')
+    this.router.navigate(['/login'])
   }
 
   resetlogin() {
-    this.router.navigateByUrl('resetlogin')
+    this.router.navigate(['/resetlogin'])
   }
 
   presidente() {
-    this.router.navigateByUrl('mesas')
+    this.router.navigate(['/mesas'])
   }
 
   nacional() {

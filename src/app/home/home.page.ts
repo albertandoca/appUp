@@ -11,8 +11,8 @@ export class HomePage implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    setInterval (() => {
-      this.router.navigateByUrl('login')
+    setTimeout (() => {
+      this.router.navigate(['/login'])
     }, 3000)
   }
 
